@@ -142,7 +142,8 @@
     <ClCompile Include="Neuron.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="NeuronData.txt" />
+    <Text Include="NeuronData1.txt" />
+    <Text Include="NeuronData2.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Neuron.h" />

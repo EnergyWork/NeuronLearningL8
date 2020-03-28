@@ -23,7 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="NeuronData.txt">
+    <Text Include="NeuronData2.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="NeuronData1.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

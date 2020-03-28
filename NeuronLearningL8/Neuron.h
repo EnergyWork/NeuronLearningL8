@@ -11,10 +11,12 @@ class Neuron {
 	vector<double> weight;
 	struct studyExample	{
 		vector<double> signalsIn;
-		double signalsOut;
+		int signalsOut;
 	};
 	vector<studyExample> studyExamples;
 	void readData(string file);
+	bool check(studyExample example);
+	void penalty(studyExample example, int outSignal);
 	void learning();
 public:
 	Neuron(string file)
@@ -23,4 +25,5 @@ public:
 		learning();
 	}
 	bool test(vector<double> signals);
+	void printTaskResult();
 };
