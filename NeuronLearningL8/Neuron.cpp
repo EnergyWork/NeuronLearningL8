@@ -20,10 +20,10 @@ void Neuron::readData(string file) {
 		studyExamples[i].signalsOut = tmp2;
 	}
 }
-bool Neuron::check(studyExample example) {
+bool Neuron::check(vector<double> exampleSignalsIn) {
 	double sum = 0;
 	for (size_t i = 0; i < this->countInputs; i++) {
-		sum += weight[i] * example.signalsIn[i];
+		sum += weight[i] * exampleSignalsIn[i];
 	}
 	return (sum >= p ? true : false);
 }
@@ -39,17 +39,13 @@ void Neuron::learning() {
 	while (tmpCount != this->countStudyExampls) {
 		tmpCount = 0;
 		for (auto example : studyExamples) {
-			outSignal = check(example);
+			outSignal = check(example.signalsIn);
 			if (outSignal == example.signalsOut)
 				tmpCount++;
 			else 
 				penalty(example, outSignal);
 		}
 	}
-}
-bool Neuron::test(vector<double> signals) {
-
-	return false;
 }
 void Neuron::printTaskResult() {
 	for (size_t i = 0; i < countInputs; i++) {

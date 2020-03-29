@@ -142,6 +142,7 @@
     <ClCompile Include="Neuron.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="GopnicData.txt" />
     <Text Include="NeuronData1.txt" />
     <Text Include="NeuronData2.txt" />
   </ItemGroup>

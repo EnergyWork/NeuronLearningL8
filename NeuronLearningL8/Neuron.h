@@ -15,7 +15,7 @@ class Neuron {
 	};
 	vector<studyExample> studyExamples;
 	void readData(string file);
-	bool check(studyExample example);
+
 	void penalty(studyExample example, int outSignal);
 	void learning();
 public:
@@ -24,6 +24,7 @@ public:
 		readData(file);
 		learning();
 	}
-	bool test(vector<double> signals);
+	inline uint32_t getCountInputs() { return countInputs; }
+	bool check(vector<double> exampleSignalsIn);
 	void printTaskResult();
 };
